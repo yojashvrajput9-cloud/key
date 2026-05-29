@@ -1,22 +1,27 @@
 gg.setVisible(false)
 
-gg.alert("Wellcome ❤️ to Adil Bajwa 👿 English Script This script is totally free 🎉 so avoid scammers ☠️ my discord @adilbajwa03" ) 
-
-
+gg.alert("Wellcome ❤️ to Yuvraj 👿 English Script This script is totally free 🎉 so avoid scammers ☠️ my discord @yojashv.exe" ) 
 
 --╔═══════════════════════════════════════════════════════════════════╗
 --║                                                                   ║
---║        █████╗ ██████╗ ██╗██╗         ██████╗  █████╗      ║
---║       ██╔══██╗██╔══██╗██║██║         ██╔══██╗██╔══██╗     ║
---║       ███████║██║  ██║██║██║         ██████╔╝███████║     ║
---║       ██╔══██║██║  ██║██║██║         ██╔══██╗██╔══██║     ║
---║       ██║  ██║██████╔╝██║███████╗    ██████╔╝██║  ██║     ║
---║       ╚═╝  ╚═╝╚═════╝ ╚═╝╚══════╝    ╚═════╝ ╚═╝  ╚═╝     ║
+--║        ██╗   ██╗██╗   ██╗██╗   ██╗██████╗  █████╗          ██╗    ║
+--║        ╚██╗ ██╔╝██║   ██║██║   ██║██╔══██╗██╔══██╗         ██║    ║
+--║         ╚████╔╝ ██║   ██║██║   ██║██████╔╝███████║         ██║    ║
+--║          ╚██╔╝  ██║   ██║╚██╗ ██╔╝██╔══██╗██╔══██║   ██    ██║    ║
+--║           ██║   ╚██████╔╝ ╚████╔╝ ██║  ██║██║  ██║  ╚████╔╝██║    ║
+--║           ╚═╝    ╚═════╝   ╚═══╝  ╚═╝  ╚═╝╚═╝  ╚═╝    ╚═══╝╚═╝    ║
 --║                                                                   ║
---║                      DEVIL 👿  BAJWA                         ║
+--║                   ██████╗ ██╗███████╗███████╗                     ║
+--║                   ██╔══██╗██║╚══███╔╝╚══███╔╝                     ║
+--║                   ██████╔╝██║  ███╔╝   ███╔╝                      ║
+--║                   ██╔══██╗██║ ███╔╝   ███╔╝                       ║
+--║                   ██████╔╝██║███████╗███████╗                     ║
+--║                   ╚═════╝ ╚═╝╚══════╝╚══════╝                     ║
 --║                                                                   ║
---║                    CREATED BY ADIL BAJWA                          ║
---║                  Discord: @adilbajwa03                           ║
+--║                      W A R   A I M B O T                          ║
+--║                                                                   ║
+--║                        CREATED BY YUVRAJ                          ║
+--║                    TELEGRAM: @yojashv                             ║
 --║                                                                   ║
 --╚═══════════════════════════════════════════════════════════════════╝
 
@@ -25,12 +30,21 @@ gg.clearResults()
 gg.clearList()
 
 --╔═══════════════════════════════════════════════════════════════════╗
---║                      SPECIAL EFFECTS                               ║
+--║                      SPECIAL EFFECTS                              ║
 --╚═══════════════════════════════════════════════════════════════════╝
 
 function showSuccess() 
-    toast.success("╔══════════════════════════════════╗\n║      ✅ ACTIVATED SUCCESSFULLY ✅     ║\n║           BY Adil                 ║\n╚══════════════════════════════════╝") 
+    toast.success("✅ FEATURE ACTIVATED BY YUVRAJ ✨", 2) 
 end
+
+function showDisabled() 
+    toast.hint("⚠️ FEATURE DISABLED BY YUVRAJ ⚠️", 2) 
+end
+
+function showError() 
+    toast.error("❌ VALUE NOT FOUND ❌", 2) 
+end
+
 --╔═══════════════════════════════════════════════════════════════════╗
 --║                    GLOBAL VARIABLES & SETUP                        ║
 --╚═══════════════════════════════════════════════════════════════════╝
@@ -119,7 +133,7 @@ end
 function Z.bc()
     data = {}
     if Result == nil or #Result == 0 then
-        toast.hint("╔══════════════════════════════════╗\n║      🔍 NO VALUES FOUND 🔍        ║\n╚══════════════════════════════════╝")
+        toast.hint("🔍 NO VALUES FOUND 🔍")
     else
         for i, v in pairs(Result) do
             data[#data + 1] = v.address
@@ -253,14 +267,14 @@ frzsl6 = "❌"
 frzsl7 = "❌"
 
 --╔═══════════════════════════════════════════════════════════════════╗
---║                    Adil AIMBOT SYSTEM                           ║
+--║                    Yuvraj AIMBOT SYSTEM                           ║
 --╚═══════════════════════════════════════════════════════════════════╝
 
-AdilAimbotRunning = false
-AdilSelectedStrength = 2
-AdilOldAimValue = "1042536202"
+YuvrajAimbotRunning = false
+YuvrajSelectedStrength = 2
+YuvrajOldAimValue = "1042536202"
 
-AdilStrengthNames = {
+YuvrajStrengthNames = {
     "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
     "🌟 EXTRA LIGHT     [ VERY SAFE ] 🌟",
     "⭐⭐ LIGHT          [ SAFE ] ⭐⭐",
@@ -270,7 +284,7 @@ AdilStrengthNames = {
     "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 }
 
-AdilStrengthValues = {
+YuvrajStrengthValues = {
     "1042536202",
     "1048536202",
     "1051999999",
@@ -279,44 +293,44 @@ AdilStrengthValues = {
     "1080099999"
 }
 
-function AdilSmoothAimbot()
-    Z.S(AdilOldAimValue, D, Ca|O)
+function YuvrajSmoothAimbot()
+    Z.S(YuvrajOldAimValue, D, Ca|O)
     if #Result > 0 then
-        gg.editAll(AdilStrengthValues[AdilSelectedStrength], D)
+        gg.editAll(YuvrajStrengthValues[YuvrajSelectedStrength], D)
         gg.clearResults()
         return true
     end
     return false
 end
 
-function AdilSmoothAimbotOff()
-    Z.S(AdilStrengthValues[AdilSelectedStrength], D, Ca|O)
+function YuvrajSmoothAimbotOff()
+    Z.S(YuvrajStrengthValues[YuvrajSelectedStrength], D, Ca|O)
     if #Result > 0 then
-        gg.editAll(AdilOldAimValue, D)
+        gg.editAll(YuvrajOldAimValue, D)
         gg.clearResults()
         return true
     end
     return false
 end
 
-function AdilStartAimbot()
-    if AdilAimbotRunning then return end
+function YuvrajStartAimbot()
+    if YuvrajAimbotRunning then return end
     
-    AdilAimbotRunning = true
+    YuvrajAimbotRunning = true
     gg.setVisible(false)
     
-    toast.hint("╔══════════════════════════════════════════════════╗\n║     🎯 Adil AIMBOT ACTIVATED 🎯              ║\n║     " .. AdilStrengthNames[AdilSelectedStrength] .. "     ║\n║     PRESS GG ICON TO STOP                        ║\n╚══════════════════════════════════════════════════╝", 4)
+    toast.hint("╔══════════════════════════════════════════════════╗\n║     🎯 Yuvraj AIMBOT ACTIVATED 🎯              ║\n║     " .. YuvrajStrengthNames[YuvrajSelectedStrength] .. "     ║\n║     PRESS GG ICON TO STOP                        ║\n╚══════════════════════════════════════════════════╝", 4)
     
     local tick = 0
-    while AdilAimbotRunning do
+    while YuvrajAimbotRunning do
         if gg.isVisible() then
             gg.setVisible(false)
-            AdilAimbotRunning = false
+            YuvrajAimbotRunning = false
             break
         end
         
         if tick % 2 == 0 then
-            AdilSmoothAimbot()
+            YuvrajSmoothAimbot()
         end
         
         tick = tick + 1
@@ -325,27 +339,27 @@ function AdilStartAimbot()
         if tick > 1000 then tick = 0 end
     end
     
-    AdilSmoothAimbotOff()
+    YuvrajSmoothAimbotOff()
     gg.setVisible(true)
-    toast.hint("╔══════════════════════════════════════════════════╗\n║     🛑 Adil AIMBOT STOPPED 🛑                 ║\n╚══════════════════════════════════════════════════╝")
-    AdilAimbotRunning = false
-    AdilAimMenu()
+    toast.hint("🛑 Yuvraj AIMBOT STOPPED 🛑")
+    YuvrajAimbotRunning = false
+    YuvrajAimMenu()
 end
 
-function AdilStartGrabAimbot()
-    if AdilAimbotRunning then return end
+function YuvrajStartGrabAimbot()
+    if YuvrajAimbotRunning then return end
     
-    AdilAimbotRunning = true
+    YuvrajAimbotRunning = true
     gg.setVisible(false)
     toast.hint("╔══════════════════════════════════════════════════╗\n║     🫴 GRAB AIMBOT ACTIVATED 🫴                  ║\n║     HOLD AIM BUTTON TO ACTIVATE                 ║\n║     PRESS GG ICON TO STOP                        ║\n╚══════════════════════════════════════════════════╝", 4)
     
     local isAiming = false
-    local aimValue = AdilOldAimValue
+    local aimValue = YuvrajOldAimValue
     
-    while AdilAimbotRunning do
+    while YuvrajAimbotRunning do
         if gg.isVisible() then
             gg.setVisible(false)
-            AdilAimbotRunning = false
+            YuvrajAimbotRunning = false
             break
         end
         
@@ -356,18 +370,18 @@ function AdilStartGrabAimbot()
             
             if currentVal ~= aimValue then
                 if not isAiming then
-                    Z.S(AdilOldAimValue, D, Ca|O)
+                    Z.S(YuvrajOldAimValue, D, Ca|O)
                     if #Result > 0 then
-                        gg.editAll(AdilStrengthValues[AdilSelectedStrength], D)
+                        gg.editAll(YuvrajStrengthValues[YuvrajSelectedStrength], D)
                         isAiming = true
                     end
                 end
                 aimValue = currentVal
             else
                 if isAiming then
-                    Z.S(AdilStrengthValues[AdilSelectedStrength], D, Ca|O)
+                    Z.S(YuvrajStrengthValues[YuvrajSelectedStrength], D, Ca|O)
                     if #Result > 0 then
-                        gg.editAll(AdilOldAimValue, D)
+                        gg.editAll(YuvrajOldAimValue, D)
                         isAiming = false
                     end
                 end
@@ -379,56 +393,56 @@ function AdilStartGrabAimbot()
     end
     
     if isAiming then
-        Z.S(AdilStrengthValues[AdilSelectedStrength], D, Ca|O)
+        Z.S(YuvrajStrengthValues[YuvrajSelectedStrength], D, Ca|O)
         if #Result > 0 then
-            gg.editAll(AdilOldAimValue, D)
+            gg.editAll(YuvrajOldAimValue, D)
             gg.clearResults()
         end
     end
     
     gg.setVisible(true)
-    toast.hint("╔══════════════════════════════════════════════════╗\n║     🛑 GRAB AIMBOT STOPPED 🛑                     ║\n╚══════════════════════════════════════════════════╝")
-    AdilAimbotRunning = false
-    AdilAimMenu()
+    toast.hint("🛑 GRAB AIMBOT STOPPED 🛑")
+    YuvrajAimbotRunning = false
+    YuvrajAimMenu()
 end
 
-function AdilSelectStrength()
+function YuvrajSelectStrength()
     local menu = {}
     for i = 1, 5 do
-        if i == AdilSelectedStrength then
-            menu[i] = AdilStrengthNames[i] .. "    ✅ ACTIVE"
+        if i == YuvrajSelectedStrength then
+            menu[i] = YuvrajStrengthNames[i] .. "    ✅ ACTIVE"
         else
-            menu[i] = AdilStrengthNames[i]
+            menu[i] = YuvrajStrengthNames[i]
         end
     end
     menu[#menu + 1] = "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     menu[#menu + 1] = "🔙 RETURN TO AIMBOT MENU"
     
-    local choice = gg.choice(menu, nil, "╔══════════════════════════════════════════════════╗\n║           SELECT AIMBOT STRENGTH                 ║\n║                Adil  WAR                   ║\n╚══════════════════════════════════════════════════╝")
+    local choice = gg.choice(menu, nil, "SELECT AIMBOT STRENGTH")
     
     if not choice or choice == #menu then
-        AdilAimMenu()
+        YuvrajAimMenu()
         return
     end
     
-    AdilSelectedStrength = choice
+    YuvrajSelectedStrength = choice
     
     if choice == 1 then
-        toast.success("╔══════════════════════════════════╗\n║   🌟 EXTRA LIGHT - VERY SAFE 🌟   ║\n╚══════════════════════════════════╝")
+        toast.success("🌟 EXTRA LIGHT - VERY SAFE 🌟")
     elseif choice == 2 then
-        toast.success("╔══════════════════════════════════╗\n║   ⭐⭐ LIGHT - SAFE ⭐⭐           ║\n╚══════════════════════════════════╝")
+        toast.success("🌟 LIGHT - SAFE 🌟")
     elseif choice == 3 then
-        toast.success("╔══════════════════════════════════╗\n║   ⭐⭐⭐ NORMAL - BALANCED ⭐⭐⭐    ║\n╚══════════════════════════════════╝")
+        toast.success("🌟 NORMAL - BALANCED 🌟")
     elseif choice == 4 then
-        toast.hint("╔══════════════════════════════════╗\n║   ⭐⭐⭐⭐ STRONG - AGGRESSIVE ⭐⭐⭐⭐ ║\n╚══════════════════════════════════╝")
+        toast.hint("⭐⭐⭐⭐ STRONG - AGGRESSIVE ⭐⭐⭐⭐")
     elseif choice == 5 then
-        toast.hint("╔══════════════════════════════════╗\n║   ⭐⭐⭐⭐⭐ ULTRA - MAXIMUM ⭐⭐⭐⭐⭐ ║\n╚══════════════════════════════════╝")
+        toast.hint("⭐⭐⭐⭐⭐ ULTRA - MAXIMUM ⭐⭐⭐⭐⭐")
     end
     
-    AdilSelectStrength()
+    YuvrajSelectStrength()
 end
 
-function AdilAimMenu()
+function YuvrajAimMenu()
     menuuuvis = 0
     
     local choice = gg.choice({
@@ -438,30 +452,30 @@ function AdilAimMenu()
         "        🫴 START GRAB AIMBOT 🫴",
         "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
         "        ⚙️  AIM STRENGTH:",
-        "        " .. AdilStrengthNames[AdilSelectedStrength],
+        "        " .. YuvrajStrengthNames[YuvrajSelectedStrength],
         "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
         "        🛑 STOP AIMBOT",
         "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
         "        🔙 BACK TO MAIN MENU"
-    }, nil, "╔══════════════════════════════════════════════════╗\n║          Adil BAJWA AIMBOT                    ║\n║                  VIP EDITION                         ║\n║                 UNDETECTABLE                         ║\n╚══════════════════════════════════════════════════╝")
+    }, nil, "Yuvraj BIZZ WAR  AIMBOT  VIP EDITION")
     
     if not choice then mainMenu() end
     
     if choice == 2 then
-        AdilStartAimbot()
+        YuvrajStartAimbot()
     elseif choice == 4 then
-        AdilStartGrabAimbot()
+        YuvrajStartGrabAimbot()
     elseif choice == 7 then
-        AdilSelectStrength()
+        YuvrajSelectStrength()
     elseif choice == 9 then
-        if AdilAimbotRunning then
-            AdilAimbotRunning = false
-            AdilSmoothAimbotOff()
-            toast.hint("╔══════════════════════════════════╗\n║     🛑 AIMBOT STOPPED 🛑           ║\n╚══════════════════════════════════╝")
+        if YuvrajAimbotRunning then
+            YuvrajAimbotRunning = false
+            YuvrajSmoothAimbotOff()
+            toast.hint("🛑 AIMBOT STOPPED 🛑")
         else
-            toast.hint("╔══════════════════════════════════╗\n║     ⚠️ AIMBOT NOT RUNNING ⚠️      ║\n╚══════════════════════════════════╝")
+            toast.hint("⚠️ AIMBOT NOT RUNNING ⚠️")
         end
-        AdilAimMenu()
+        YuvrajAimMenu()
     elseif choice == 11 then
         mainMenu()
     end
@@ -675,7 +689,7 @@ function playerMenu()
         "║        🌎 GRAVITY V2             ║" .. (graviqq == "✅" and " ✅ ACTIVE" or " ❌ INACTIVE"),
         "╚══════════════════════════════════╝",
         "🔙 RETURN TO MAIN MENU"
-    }, nil, "╔══════════════════════════════════════════════════╗\n║               PLAYER MODS - Adil                  ║\n╚══════════════════════════════════════════════════╝")
+    }, nil, "PLAYER MODS - Yuvraj")
     
     if not choice then mainMenu() end
     
@@ -701,16 +715,33 @@ function playerMenu()
 end
 
 --╔═══════════════════════════════════════════════════════════════════╗
---║                      CAR MODS                                      ║
+--║                      CAR MODS                                     ║
 --╚═══════════════════════════════════════════════════════════════════╝
 
 function toggleCarGodMode()
     local oldState = gmcarchik == "✅"
+    
+    -- Engine vehicle structural array signature search
     Z.S("4812096201845506048", Q, Ca|Cd|O)
-    Z.W(oldState and 999999 or 1000, 0x5DC, F)
+    
+    if #Result ~= 0 then
+        -- 0x5E0 naya updated health offset hai, aur true lagane se value freeze ho jayegi
+        for i, v in ipairs(Result) do
+            setvalue(v.address + 0x5E0, oldState and 1000 or 999999, F, not oldState)
+        end
+        
+        gmcarchik = oldState and "❌" or "✅"
+        if oldState then 
+            gg.clearList() -- Freeze list clear karega jab off karoge
+            showDisabled() 
+        else 
+            showSuccess() 
+        end
+    else
+        showError()
+    end
+    
     gg.clearResults()
-    gmcarchik = oldState and "✅" or "❌"
-    if oldState then showSuccess() else showDisabled() end
     carMenu()
 end
 
@@ -770,7 +801,7 @@ function toggleMopedSpeed()
     gg.clearResults()
     mopsh = oldState and "✅" or "❌"
     if oldState then 
-        toast.hint("╔══════════════════════════════════╗\n║   🛵 PRESS BRAKE TO ACCELERATE 🛵  ║\n╚══════════════════════════════════╝")
+        toast.hint("🛵 PRESS BRAKE TO ACCELERATE 🛵")
         showSuccess() 
     else 
         showDisabled() 
@@ -847,7 +878,7 @@ function carMenu()
         "║        💥 BREAK CAR              ║",
         "║        💨 NITRO                  ║" .. (nitr == "✅" and " ✅ ACTIVE" or " ❌ INACTIVE"),
         "║        🔧 HYDRAULICS             ║" .. (gidraa == "✅" and " ✅ ACTIVE" or " ❌ INACTIVE"),
-        "║        ⚡ SPEED HACK             ║" .. (shcar == "✅" and " ✅ ACTIVE" or " ❌ INACTIVE"),
+        "║        ⚡ SPEED HACK              ║" .. (shcar == "✅" and " ✅ ACTIVE" or " ❌ INACTIVE"),
         "║        🛵 MOPED SPEED            ║" .. (mopsh == "✅" and " ✅ ACTIVE" or " ❌ INACTIVE"),
         "║        🚀 LAUNCH TO SPACE        ║",
         "║        ⬆️ LAUNCH UPWARDS         ║",
@@ -856,7 +887,7 @@ function carMenu()
         "║        🫸 PUT ON WHEELS          ║" .. (carkoles1 == "✅" and " ✅ ACTIVE" or " ❌ INACTIVE"),
         "╚══════════════════════════════════╝",
         "🔙 RETURN TO MAIN MENU"
-    }, nil, "╔══════════════════════════════════════════════════╗\n║                 CAR MODS - Adil                    ║\n╚══════════════════════════════════════════════════╝")
+    }, nil, "CAR MODS - Yuvraj")
     
     if not choice then mainMenu() end
     
@@ -985,7 +1016,7 @@ function visualMenu()
     menuuuvis = 0
     local choice = gg.choice({
         "╔══════════════════════════════════╗",
-        "║        👁️ ESP ON NAMES          ║" .. (esplol == "✅" and " ✅ ACTIVE" or " ❌ INACTIVE"),
+        "║        👁️ ESP ON NAMES           ║" .. (esplol == "✅" and " ✅ ACTIVE" or " ❌ INACTIVE"),
         "║        🤍 WHITE CHAMS            ║" .. (chamsiwhite == "✅" and " ✅ ACTIVE" or " ❌ INACTIVE"),
         "║        ❤️ RED CHAMS              ║" .. (chamsired == "✅" and " ✅ ACTIVE" or " ❌ INACTIVE"),
         "║        👓 WIDE FOV               ║" .. (fovv == "✅" and " ✅ ACTIVE" or " ❌ INACTIVE"),
@@ -995,7 +1026,7 @@ function visualMenu()
         "║        👻 INVISIBLE WALLS        ║" .. (invwal == "✅" and " ✅ ACTIVE" or " ❌ INACTIVE"),
         "╚══════════════════════════════════╝",
         "🔙 RETURN TO MAIN MENU"
-    }, nil, "╔══════════════════════════════════════════════════╗\n║               VISUAL MODS - Adil                   ║\n╚══════════════════════════════════════════════════╝")
+    }, nil, "VISUAL MODS - Yuvraj")
     
     if not choice then mainMenu() end
     
@@ -1214,7 +1245,7 @@ function giveCustomWeapon()
 end
 
 function showWeaponIDs()
-    gg.alert("╔══════════════════════════════════════════════════╗\n║                    WEAPON IDs - Adil                  ║\n╠══════════════════════════════════════════════════════╣\n║  1-Knife   2-Pistol   3-Deagle   4-M4   5-AK47        ║\n║  6-MP5     7-Shotgun  8-Sniper  9-RPG   10-Minigun     ║\n╚══════════════════════════════════════════════════════╝")
+    gg.alert("WEAPON IDs - Yuvraj\n║  1-Knife   2-Pistol   3-Deagle   4-M4   5-AK47        \n  6-MP5     7-Shotgun  8-Sniper  9-RPG   10-Minigun     \n")
     gunMenu()
 end
 
@@ -1237,7 +1268,7 @@ function antiReloadMenu()
         "║        🔫 MP5                    ║" .. (relompper == "✅" and " ✅ ACTIVE" or " ❌ INACTIVE"),
         "╚══════════════════════════════════╝",
         "🔙 RETURN TO WEAPON MENU"
-    }, nil, "╔══════════════════════════════════════════════════╗\n║                ANTI RELOAD - Adil                  ║\n╚══════════════════════════════════════════════════╝")
+    }, nil, "ANTI RELOAD - Yuvraj")
     
     if not choice then gunMenu() end
     if choice == 2 then toggleAntiReload("relodgper", "+200", 22)
@@ -1260,7 +1291,7 @@ function infiniteAmmoMenu()
         "║        🔫 MP5                    ║" .. (bmp5q == "✅" and " ✅ ACTIVE" or " ❌ INACTIVE"),
         "╚══════════════════════════════════╝",
         "🔙 RETURN TO WEAPON MENU"
-    }, nil, "╔══════════════════════════════════════════════════╗\n║              INFINITE AMMO - Adil                  ║\n╚══════════════════════════════════════════════════╝")
+    }, nil, "INFINITE AMMO - Yuvraj")
     
     if not choice then gunMenu() end
     if choice == 2 then toggleInfiniteAmmo("bdg", "+204")
@@ -1286,7 +1317,7 @@ function freezeSlotsMenu()
         "║        🔫 SHOTGUN                ║" .. (frzsl7 == "✅" and " ✅ ACTIVE" or " ❌ INACTIVE"),
         "╚══════════════════════════════════╝",
         "🔙 RETURN TO WEAPON MENU"
-    }, nil, "╔══════════════════════════════════════════════════╗\n║               FREEZE SLOTS - Adil                  ║\n╚══════════════════════════════════════════════════╝")
+    }, nil, "FREEZE SLOTS - Yuvraj")
     
     if not choice then gunMenu() end
     if choice == 2 then toggleFreezeSlot("frzsl1", "+192", 24, "+204")
@@ -1320,7 +1351,7 @@ function giveWeaponMenu()
         "║        ℹ️ WEAPON IDs             ║",
         "╚══════════════════════════════════╝",
         "🔙 RETURN TO WEAPON MENU"
-    }, nil, "╔══════════════════════════════════════════════════╗\n║               GIVE WEAPON - Adil                    ║\n╚══════════════════════════════════════════════════╝")
+    }, nil, "GIVE WEAPON - Yuvraj")
     
     if not choice then gunMenu() end
     if choice == 2 then giveWeapon("+192", 24, "+204")
@@ -1354,7 +1385,7 @@ function giveAmmoMenu()
         "║        🔫 SHOTGUN                ║",
         "╚══════════════════════════════════╝",
         "🔙 RETURN TO WEAPON MENU"
-    }, nil, "╔══════════════════════════════════════════════════╗\n║                GIVE AMMO - Adil                     ║\n╚══════════════════════════════════════════════════╝")
+    }, nil, "GIVE AMMO - Yuvraj")
     
     if not choice then gunMenu() end
     if choice == 2 then giveAmmo("+204")
@@ -1379,15 +1410,15 @@ function gunMenu()
         "║        ❄️ FREEZE SLOTS           ║",
         "║        🔄 ANTI RELOAD            ║",
         "║        ♾️ INFINITE AMMO          ║",
-        "║        ⚡ FIRE RATE (No Recoil)  ║",
+        "║        ⚡ FIRE RATE (No Recoil)   ║",
         "║        🎯 SCOPE SPEED            ║" .. (shshq == "✅" and " ✅ ACTIVE" or " ❌ INACTIVE"),
         "║        🎯 NO SPREAD              ║" .. (sc == "✅" and " ✅ ACTIVE" or " ❌ INACTIVE"),
         "║        🌾 FARM SKILLS            ║" .. (fsk == "✅" and " ✅ ACTIVE" or " ❌ INACTIVE"),
         "║        ➕ ASSIST + C             ║" .. (avty == "✅" and " ✅ ACTIVE" or " ❌ INACTIVE"),
-        "║        ⚡➕ FIRE RATE + SPEED    ║" .. (alertr == "✅" and " ✅ ACTIVE" or " ❌ INACTIVE"),
+        "║        ⚡➕ FIRE RATE + SPEED     ║" .. (alertr == "✅" and " ✅ ACTIVE" or " ❌ INACTIVE"),
         "╚══════════════════════════════════╝",
         "🔙 RETURN TO MAIN MENU"
-    }, nil, "╔══════════════════════════════════════════════════╗\n║               WEAPON MODS - Adil                    ║\n╚══════════════════════════════════════════════════╝")
+    }, nil, "WEAPON MODS - Yuvraj")
     
     if not choice then mainMenu() end
     
@@ -1421,58 +1452,76 @@ function teleportByCoords()
 end
 
 function teleportByMarker()
+    -- Step 1: Core Player freeze loop bypass trigger
     hookPLAYER(-4, F, 350)
+    
+    -- Force fully flush GG internal cache storage to stop old reference locks
+    gg.clearResults()
+    
     while true do
-        fg.clean()
         local points = {}
-        local menu = {}
+        
+        -- Loop 1: Check primary dynamic marker arrays with direct value verification
         for _, q in ipairs({"13950255104", "5360320512"}) do
             if #points == 0 then
                 Z.S(q, Q, O)
-                if Result then
-                    for _, v in ipairs(Result) do
+                if Result and #Result > 0 then
+                    -- Reverse parsing: Naye pointer hamesha dynamic allocation me niche hote hain
+                    for i = #Result, 1, -1 do
+                        local v = Result[i]
                         local vals = gg.getValues({
                             {address = v.address + 32, flags = F},
-                            {address = v.address + 36, flags = F},
-                            {address = v.address + 40, flags = F},
-                            {address = v.address + 48, flags = F}
+                            {address = v.address + 36, flags = F}
                         })
-                        local x, y, z, active = vals[1].value, vals[2].value, vals[3].value, vals[4].value
-                        if x ~= 0 and y ~= 0 and x > -3000 and x < 3000 and y > -3000 and y < 3000 and z == 0 and active == 1 then
+                        local x, y = vals[1].value, vals[2].value
+                        
+                        -- Valid coordinates aur distance threshold filter check
+                        if x ~= 0 and y ~= 0 and math.abs(x) > 0.1 then
                             table.insert(points, {x, y})
-                            table.insert(menu, string.format("📍 [%d] X:%.1f Y:%.1f", #points, x, y))
+                            break -- Absolute freshest valid point milte hi loop break karo
                         end
                     end
                 end
             end
         end
+        
+        -- Loop 2: Safe Fallback Area Allocation (Agar dynamic array flush ho gayi ho)
+        if #points == 0 then
+            gg.clearResults() -- Flush again for clean storage range memory allocation
+            gg.setRanges(Ca) 
+            gg.searchNumber("13950255104", Q)
+            local count = gg.getResultCount()
+            if count > 0 then
+                -- Target the absolute latest generated structural stack point
+                local rawRes = gg.getResults(count)
+                local targetNode = rawRes[count] -- Picks the newest allocated node address entry
+                local rawVals = gg.getValues({
+                    {address = targetNode.address + 32, flags = F},
+                    {address = targetNode.address + 36, flags = F}
+                })
+                if rawVals[1].value ~= 0 and math.abs(rawVals[1].value) > 0.1 then
+                    table.insert(points, {rawVals[1].value, rawVals[2].value})
+                end
+            end
+        end
+        
+        -- Execution Router Logic Check
         if #points == 0 then
             showError()
-            fg.clean()
-            hookPLAYER(-4, F, 100)
+            gg.clearResults()
+            hookPLAYER(-4, F, 100) -- Reset player normal physics weight state
             return tpMenu()
-        end
-        table.insert(menu, "🔄 REFRESH")
-        table.insert(menu, "🔙 BACK")
-        local s = gg.choice(menu, nil, "╔══════════════════════════════════════════════════╗\n║           SELECT MARKER TO TELEPORT                 ║\n╚══════════════════════════════════════════════════╝")
-        if not s then
-            gg.setVisible(false)
-            while not gg.isVisible() do gg.sleep(200) end
-        elseif menu[s] == "🔙 BACK" then
-            fg.clean()
-            hookPLAYER(-4, F, 100)
-            return tpMenu()
-        elseif menu[s] == "🔄 REFRESH" then
         else
-            doTeleport(points[s][1], points[s][2], 50)
+            -- Absolute verified coordinate allocation jump injection sequence
+            doTeleport(points[1][1], points[1][2], 50)
             showSuccess()
-            fg.clean()
+            gg.clearResults() -- Instantly clean reference states after success jump
             break
         end
     end
 end
 
-FILE_PATH = gg.EXT_STORAGE .. "/Adil_points.txt"
+FILE_PATH = gg.EXT_STORAGE .. "/Yuvraj_points.txt"
 savedPoints = {}
 
 function loadPoints()
@@ -1525,7 +1574,7 @@ function managePointsMenu()
         "║        🗑️ CLEAR ALL POINTS       ║",
         "╚══════════════════════════════════╝",
         "🔙 BACK"
-    }, nil, "╔══════════════════════════════════════════════════╗\n║              MANAGE POINTS - Adil                  ║\n╚══════════════════════════════════════════════════╝")
+    }, nil, "MANAGE POINTS - Yuvraj")
     
     if not choice then return tpMenu() end
     
@@ -1536,7 +1585,7 @@ function managePointsMenu()
             local res = gg.alert(text, "BACK", "COPY")
             if res == 2 then
                 gg.copyText(text)
-                toast.success("╔══════════════════════════════════╗\n║      📋 COORDINATES COPIED 📋      ║\n╚══════════════════════════════════╝")
+                toast.success("📋 COORDINATES COPIED 📋 ")
             end
         end
         managePointsMenu()
@@ -1548,7 +1597,7 @@ function managePointsMenu()
             if prompt then
                 table.insert(savedPoints, {name = prompt[1], x = x, y = y, z = z})
                 savePoints()
-                toast.success("╔══════════════════════════════════╗\n║      💾 POINT SAVED: " .. prompt[1] .. "      ║\n╚══════════════════════════════════╝")
+                toast.success("💾 POINT SAVED: " .. prompt[1] .. "")
             end
         end
         managePointsMenu()
@@ -1560,7 +1609,7 @@ function managePointsMenu()
         if gg.alert("🗑️ DELETE ALL POINTS?", "YES", "NO") == 1 then
             savedPoints = {}
             savePoints()
-            toast.success("╔══════════════════════════════════╗\n║      🗑️ ALL POINTS CLEARED 🗑️     ║\n╚══════════════════════════════════╝")
+            toast.success("🗑️ ALL POINTS CLEARED 🗑️")
         end
         managePointsMenu()
         
@@ -1571,7 +1620,7 @@ end
 
 function viewSavedPoints()
     if #savedPoints == 0 then
-        gg.alert("╔══════════════════════════════════╗\n║      📋 NO SAVED POINTS FOUND      ║\n╚══════════════════════════════════╝")
+        gg.alert("📋 NO SAVED POINTS FOUND")
         return managePointsMenu()
     end
     
@@ -1581,7 +1630,7 @@ function viewSavedPoints()
     end
     list[#list + 1] = "🔙 BACK"
     
-    local q = gg.choice(list, nil, "╔══════════════════════════════════════════════════╗\n║                 SELECT POINT - Adil               ║\n╚══════════════════════════════════════════════════╝")
+    local q = gg.choice(list, nil, "SELECT POINT - Yuvraj")
     if not q or q == #list then return managePointsMenu() end
     
     local p = savedPoints[q]
@@ -1592,7 +1641,7 @@ function viewSavedPoints()
     elseif action == 2 then
         table.remove(savedPoints, q)
         savePoints()
-        toast.success("╔══════════════════════════════════╗\n║      🗑️ POINT DELETED 🗑️           ║\n╚══════════════════════════════════╝")
+        toast.success("🗑️ POINT DELETED 🗑️ ")
         viewSavedPoints()
     else
         viewSavedPoints()
@@ -1622,12 +1671,15 @@ stations = {
 }
 
 parking = {
+    {"🅿️ Arzamas parking", 407, 604, 15},
+    {"🅿️ Yuzny parking", 2435, -1735, 23},
+    {"🅿️ Baterevo parking", 1764, 2477, 17},
+    {"🅿️ Edovo parking", -2375, 2699, 40},
     {"💰 Economy Autosalon", 2323, -1800, 22},
     {"💎 Comfort Autosalon", 2217, 2991, 14},
     {"👑 Premium Autosalon", 602, 998, 12},
-    {"🏍️ Motosalon", 340, 479, 12},
-    {"Arz Parking 🅿️", 419.76, 584.26, 11.88,}
- }
+    {"🏍️ Motosalon", 340, 479, 12}
+}
 
 government = {
     {"🏛️ Government Building", -79, 839, 17},
@@ -1639,13 +1691,11 @@ government = {
     {"🕵️ FSB", 1896, -1995, 31}
 }
 
-criminal = {
+OCGs = {
+    {"💀 Pink OCG", 482, 749, 15},
     {"💀 Tambov Gang", 2425, -1922, 22},
     {"💀 Kurgan Gang", 2285, 1369, 11},
-    {"🖤 Black Market", -2249, 245, 24.5},
-    {"👿 Orekhov Gang", 481.89, 742.55, 12.00},
-    {"⚔️Sawmill bizzwar", -1043.95, -2464.63, 28.48},
-    {"🔪Fam war enternce", 1503.80, -297.03, 7.34}
+    {"🖤 Black Market", -2249, 245, 24.5}
 }
 
 starterJobs = {
@@ -1683,7 +1733,7 @@ buyers = {
 }
 
 businesses = {
-    {"🏪 24/7 Shop", -2386.05, 257.38, 23.72},
+    {"🏪 24/7 Shop", -356, -1926.2, 41.2},
     {"🍽️ Restaurant", -280, -1765.3, 41},
     {"🔫 Gun Shop", 112.51, 574.09, 13.26},
     {"👕 Clothes Shop", 1945, 2066, 15.7},
@@ -1711,18 +1761,18 @@ function showLocations(locations, title)
     teleportByFootMenu()
 end
 
-function showPublicPlaces() showLocations(publicPlaces, "╔══════════════════════════════════════════════════╗\n║                PUBLIC PLACES - Adil               ║\n╚══════════════════════════════════════════════════╝") end
-function showStations() showLocations(stations, "╔══════════════════════════════════════════════════╗\n║                  STATIONS - Adil                  ║\n╚══════════════════════════════════════════════════╝") end
-function showParking() showLocations(parking, "╔══════════════════════════════════════════════════╗\n║               PARKING LOTS - Adil                 ║\n╚══════════════════════════════════════════════════╝") end
-function showGovernment() showLocations(government, "╔══════════════════════════════════════════════════╗\n║               GOVERNMENT - Adil                   ║\n╚══════════════════════════════════════════════════╝") end
-function showCriminal() showLocations(criminal, "╔══════════════════════════════════════════════════╗\n║                CRIMINAL - Adil                    ║\n╚══════════════════════════════════════════════════╝") end
-function showStarterJobs() showLocations(starterJobs, "╔══════════════════════════════════════════════════╗\n║              STARTER JOBS - Adil                  ║\n╚══════════════════════════════════════════════════╝") end
-function showJobs() showLocations(jobs, "╔══════════════════════════════════════════════════╗\n║                  JOBS - Adil                      ║\n╚══════════════════════════════════════════════════╝") end
-function showEntertainment() showLocations(entertainment, "╔══════════════════════════════════════════════════╗\n║              ENTERTAINMENT - Adil                 ║\n╚══════════════════════════════════════════════════╝") end
-function showHeliClubs() showLocations(heliClubs, "╔══════════════════════════════════════════════════╗\n║               HELI CLUBS - Adil                   ║\n╚══════════════════════════════════════════════════╝") end
-function showBuyers() showLocations(buyers, "╔══════════════════════════════════════════════════╗\n║                 BUYERS - Adil                     ║\n╚══════════════════════════════════════════════════╝") end
-function showBusinesses() showLocations(businesses, "╔══════════════════════════════════════════════════╗\n║               BUSINESSES - Adil                   ║\n╚══════════════════════════════════════════════════╝") end
-function showQuarries() showLocations(quarries, "╔══════════════════════════════════════════════════╗\n║                QUARRIES - Adil                    ║\n╚══════════════════════════════════════════════════╝") end
+function showPublicPlaces() showLocations(publicPlaces, "╔══════════════════════════════════════════════════╗\n║                PUBLIC PLACES - Yuvraj               ║\n╚══════════════════════════════════════════════════╝") end
+function showStations() showLocations(stations, "╔══════════════════════════════════════════════════╗\n║                  STATIONS - Yuvraj                  ║\n╚══════════════════════════════════════════════════╝") end
+function showParking() showLocations(parking, "╔══════════════════════════════════════════════════╗\n║               PARKING LOTS - Yuvraj                 ║\n╚══════════════════════════════════════════════════╝") end
+function showGovernment() showLocations(government, "╔══════════════════════════════════════════════════╗\n║               GOVERNMENT - Yuvraj                   ║\n╚══════════════════════════════════════════════════╝") end
+function showOCGs() showLocations(OCGs, "╔══════════════════════════════════════════════════╗\n║                OCGs - Yuvraj                    ║\n╚══════════════════════════════════════════════════╝") end
+function showStarterJobs() showLocations(starterJobs, "╔══════════════════════════════════════════════════╗\n║              STARTER JOBS - Yuvraj                  ║\n╚══════════════════════════════════════════════════╝") end
+function showJobs() showLocations(jobs, "╔══════════════════════════════════════════════════╗\n║                  JOBS - Yuvraj                      ║\n╚══════════════════════════════════════════════════╝") end
+function showEntertainment() showLocations(entertainment, "╔══════════════════════════════════════════════════╗\n║              ENTERTAINMENT - Yuvraj                 ║\n╚══════════════════════════════════════════════════╝") end
+function showHeliClubs() showLocations(heliClubs, "╔══════════════════════════════════════════════════╗\n║               HELI CLUBS - Yuvraj                   ║\n╚══════════════════════════════════════════════════╝") end
+function showBuyers() showLocations(buyers, "╔══════════════════════════════════════════════════╗\n║                 BUYERS - Yuvraj                     ║\n╚══════════════════════════════════════════════════╝") end
+function showBusinesses() showLocations(businesses, "╔══════════════════════════════════════════════════╗\n║               BUSINESSES - Yuvraj                   ║\n╚══════════════════════════════════════════════════╝") end
+function showQuarries() showLocations(quarries, "╔══════════════════════════════════════════════════╗\n║                QUARRIES - Yuvraj                    ║\n╚══════════════════════════════════════════════════╝") end
 
 function teleportByFootMenu()
     menuuuvis = 0
@@ -1730,9 +1780,9 @@ function teleportByFootMenu()
         "╔══════════════════════════════════╗",
         "║        🏢 PUBLIC PLACES          ║",
         "║        🚉 STATIONS               ║",
-        "║        🅿️ PARKING LOTS          ║",
+        "║        🅿️ PARKING LOTS           ║",
         "║        👮 GOVERNMENT             ║",
-        "║        🕵️ CRIMINAL              ║",
+        "║        🕵️ OCGs                   ║",
         "║        🔰 STARTER JOBS           ║",
         "║        💼 JOBS                   ║",
         "║        🎉 ENTERTAINMENT          ║",
@@ -1743,14 +1793,14 @@ function teleportByFootMenu()
         "║        📍 MY POINTS              ║",
         "╚══════════════════════════════════╝",
         "🔙 BACK"
-    }, nil, "╔══════════════════════════════════════════════════╗\n║            TELEPORT BY FOOT - Adil                 ║\n╚══════════════════════════════════════════════════╝")
+    }, nil, "╔══════════════════════════════════════════════════╗\n║            TELEPORT BY FOOT - Yuvraj                 ║\n╚══════════════════════════════════════════════════╝")
     
     if not choice then tpMenu() end
     if choice == 2 then showPublicPlaces()
     elseif choice == 3 then showStations()
     elseif choice == 4 then showParking()
     elseif choice == 5 then showGovernment()
-    elseif choice == 6 then showCriminal()
+    elseif choice == 6 then showOCGs()
     elseif choice == 7 then showStarterJobs()
     elseif choice == 8 then showJobs()
     elseif choice == 9 then showEntertainment()
@@ -1774,7 +1824,7 @@ function tpMenu()
         "║        💾 SAVE/MANAGE POINTS     ║",
         "╚══════════════════════════════════╝",
         "🔙 BACK"
-    }, nil, "╔══════════════════════════════════════════════════╗\n║                TELEPORT - Adil                     ║\n╚══════════════════════════════════════════════════╝")
+    }, nil, "TELEPORT - Yuvraj")
     
     if not choice then mainMenu() end
     if choice == 2 then teleportByCoords()
@@ -1787,25 +1837,352 @@ function tpMenu()
 end
 
 --╔═══════════════════════════════════════════════════════════════════╗
---║                    DEV & SUPPORT                                   ║
+--║                    Casino Martingale Bot                          ║
+--╚═══════════════════════════════════════════════════════════════════╝
+
+function yuvrajCasinoMartingaleBot()
+    menuuuvis = 0
+    
+    -- 1. User se setup input maangna (Coordinates aur Betting settings)
+    local setup = gg.prompt({
+        "📍 ENTER SPIN BUTTON X COORDINATE:",
+        "📍 ENTER SPIN BUTTON Y COORDINATE:",
+        "💰 ENTER STARTING BET AMOUNT (₽):",
+        "🎰 ENTER TOTAL AUTOPLAY SPINS:"
+    }, {
+        "640",  -- Default placeholder for X
+        "420",  -- Default placeholder for Y
+        "1000", -- Starting Bet
+        "20"    -- Total Spins count
+    }, {
+        "number", "number", "number", "number"
+    })
+    
+    if not setup then return mainMenu() end
+    
+    local targetX = tonumber(setup[1])
+    local targetY = tonumber(setup[2])
+    local baseBet = tonumber(setup[3])
+    local maxSpins = tonumber(setup[4])
+    
+    local currentBet = baseBet
+    gg.setVisible(false)
+    
+    toast.hint("🚀 CASINO MARTINGALE BOT ACTIVATED 🚀\nHOLD GG ICON TO FORCE STOP", 4)
+    gg.sleep(1000)
+    
+    for spin = 1, maxSpins do
+        -- Anti-cheat emergency break check (Agar user GG icon open kare toh bot ruk jaye)
+        if gg.isVisible() then
+            gg.setVisible(true)
+            toast.hint("🛑 CASINO BOT FORCE STOPPED BY USER", 2)
+            return mainMenu()
+        end
+        
+        -- Screen par user ke diye gaye coordinates par click karna
+        gg.touch({x = targetX, y = targetY}, true)
+        toast.hint("🎰 Spin #" .. spin .. " | Current Bet: " .. currentBet .. " ₽", 2)
+        
+        -- Game loop update ka wait (3 to 4 seconds random delay taaki anti-cheat track na kare)
+        local randomWait = math.random(3200, 4100)
+        gg.sleep(randomWait)
+        
+        -- 2. Win / Loss Status Input (Kyunki casino server-side hai, game script khud check nahi kar sakti)
+        gg.setVisible(true)
+        local status = gg.choice({
+            "✅ I WON THIS ROUND!",
+            "❌ I LOST THIS ROUND (Double Down)"
+        }, nil, "╔═════════════════════════════════╗\n  ROUND " .. spin .. " RESULT? (Bet: " .. currentBet .. " ₽)\n╚═════════════════════════════════╝")
+        
+        if not status then 
+            toast.hint("🛑 BOT PAUSED BY USER", 2)
+            break 
+        end
+        
+        if status == 1 then
+            -- Jeet gaye! Bet ko wapas normal starting amount par reset karo
+            currentBet = baseBet
+            toast.success("🎉 PROFIT SECURED! BET RESET TO: " .. currentBet .. " ₽", 2)
+        elseif status == 2 then
+            -- Haar gaye! Martingale strategy ke mutabik agli bet double karo
+            currentBet = currentBet * 2
+            toast.hint("⚠️ LOSS DETECTED! NEXT BET DOUBLED: " .. currentBet .. " ₽", 2)
+        end
+        
+        gg.setVisible(false)
+        gg.sleep(1000)
+    end
+    
+    gg.setVisible(true)
+    gg.alert("🏁 CASINO AUTOMATION LOOP COMPLETED!\nYour final optimized bet tracking state has ended.")
+    mainMenu()
+end
+
+function yuvrajMartingaleCalculatorRoute()
+    menuuuvis = 0
+    
+    -- User se budget aur base bet ka input lena
+    local input = gg.prompt({
+        "💰 ENTER YOUR TOTAL CHIPS / BALANCE (₽):",
+        "💵 ENTER STARTING BASE BET AMOUNT (₽):"
+    }, {
+        "50000", -- Default Total Balance Placeholder
+        "1000"   -- Default Starting Bet Placeholder
+    }, {
+        "number", "number"
+    })
+    
+    if not input then return mainMenu() end
+    
+    local totalBalance = tonumber(input[1])
+    local currentBet = tonumber(input[2])
+    
+    if currentBet > totalBalance then
+        gg.alert("❌ ERROR: Starting bet cannot be greater than your total balance!")
+        return yuvrajMartingaleCalculatorRoute()
+    end
+    
+    -- Dynamic table calculation variables
+    local matrixText = "📊 YUVRAJ AUTOMATIC CASINO ROUTE 📊\n"
+    matrixText = matrixText .. "━━━━━━━━━━━━━━━━━━━━━━━━\n"
+    matrixText = matrixText .. "Your Balance: " .. totalBalance .. " ₽\n"
+    matrixText = matrixText .. "Starting Bet: " .. currentBet .. " ₽\n"
+    matrixText = matrixText .. "━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+    matrixText = matrixText .. "Round | Bet Size | Total Loss If Lost\n"
+    matrixText = matrixText .. "----------------------------------------\n"
+    
+    local accumulatedLoss = 0
+    local safeRounds = 0
+    local tempBalance = totalBalance
+    
+    -- 10 rounds tak ka mathematical progression calculation loop
+    for round = 1, 10 do
+        accumulatedLoss = accumulatedLoss + currentBet
+        
+        if tempBalance >= currentBet then
+            matrixText = matrixText .. string.format("  #%d   |   %d ₽   |   %d ₽\n", round, currentBet, accumulatedLoss)
+            tempBalance = tempBalance - currentBet
+            safeRounds = round
+            currentBet = currentBet * 2 -- Martingale rule multiplication
+        else
+            matrixText = matrixText .. string.format("  #%d   |   ⚠️ INSUFFICIENT BALANCE ⚠️\n", round)
+        end
+    end
+    
+    matrixText = matrixText .. "\n━━━━━━━━━━━━━━━━━━━━━━━━\n"
+    matrixText = matrixText .. "🛡️ SAFE ROUTE VERDICT:\n"
+    matrixText = matrixText .. "Aap lagatar " .. safeRounds .. " baar HAAR jhel sakte hain.\n"
+    if safeRounds >= 6 then
+        matrixText = matrixText .. "🟢 STATUS: HIGHLY SAFE ROUTE (Low Risk)"
+    elseif safeRounds >= 4 then
+        matrixText = matrixText .. "🟡 STATUS: MEDIUM RISK (Be Careful)"
+    else
+        matrixText = matrixText .. "🔴 STATUS: CRITICAL RISK! Increase Balance."
+    end
+    matrixText = matrixText .. "\n━━━━━━━━━━━━━━━━━━━━━━━━"
+    
+    -- Output display inside GameGuardian panel with interaction gates
+    local choice = gg.alert(matrixText, "🔙 MAIN MENU", "🔄 RE-CALCULATE")
+    if choice == 2 then 
+        yuvrajMartingaleCalculatorRoute() 
+    else 
+        mainMenu() 
+    end
+end
+
+function casinoMenu()
+    menuuuvis = 0
+    local choice = gg.choice({
+        "╔══════════════════════════════════╗",
+        "║     🤖 CASINO AUTO-BET BOT       ║",
+        "║     📊 MARTINGALE CALCULATOR     ║",
+        "╚══════════════════════════════════╝",
+        "🔙 RETURN TO MAIN MENU"
+    }, nil, "CASINO HACKS - YUVRAJ")
+    
+    if not choice then return mainMenu() end
+    
+    if choice == 2 then 
+        yuvrajCasinoMartingaleBot()
+    elseif choice == 3 then 
+        yuvrajMartingaleCalculatorRoute()
+    elseif choice == 5 then 
+        mainMenu()
+    end
+    menuuuvis = -1
+end
+
+--╔═══════════════════════════════════════════════════════════════════╗
+--║                    Automation                                     ║
+--╚═══════════════════════════════════════════════════════════════════╝
+
+local recordedRoute = {}
+local isRecording = false
+local RECORD_FILE = gg.EXT_STORAGE .. "/yuvraj_macro_route.txt"
+
+-- 🎬 1. RECORDING FUNCTION
+function startYuvrajRecording()
+    if isRecording then 
+        toast.hint("⚠️ RECORDING ALREADY RUNNING!", 2)
+        return automationMenu()
+    end
+    
+    recordedRoute = {} -- Purana data clear
+    isRecording = true
+    gg.setVisible(false)
+    toast.success("🔴 RECORDING STARTED!\nDrive your route. Press GG Icon to STOP & SAVE.", 4)
+    
+    local startTime = os.time()
+    local lastX, lastY, lastZ = 0, 0, 0
+    
+    while isRecording do
+        -- Agar user GG Icon open kare toh recording rok do aur save karo
+        if gg.isVisible() then
+            isRecording = false
+            gg.setVisible(false)
+            break
+        end
+        
+        -- Current location fetch karna aapke core engine se
+        local cx, cy, cz = getCurrentCoords()
+        if cx then
+            local currentTime = os.time() - startTime
+            -- Sirf tabhi record karo agar character thoda sa bhi hila ho ya samay beeta ho
+            if cx ~= lastX or cy ~= lastY then
+                table.insert(recordedRoute, {x = cx, y = cy, z = cz, time = currentTime})
+                lastX, lastY, lastZ = cx, cy, cz
+            end
+        end
+        gg.sleep(1000) -- Har 1 second me position note karega
+    end
+    
+    -- File me save karne ka logic
+    if #recordedRoute > 0 then
+        local f = io.open(RECORD_FILE, "w")
+        if f then
+            for _, point in ipairs(recordedRoute) do
+                f:write(string.format("%.3f|%.3f|%.3f|%d\n", point.x, point.y, point.z, point.time))
+            end
+            f:close()
+            gg.setVisible(true)
+            gg.alert("💾 ROUTE SAVED SUCCESSFULLY!\nTotal Points Recorded: " .. #recordedRoute .. "\nFile Path: " .. RECORD_FILE)
+        else
+            gg.setVisible(true)
+            gg.alert("❌ Error: Storage permission not granted for writing file!")
+        end
+    else
+        gg.setVisible(true)
+        gg.alert("⚠️ No points recorded. Make sure you moved around.")
+    end
+    automationMenu()
+end
+
+-- 🎛️ 2. PLAYBACK / RUN FUNCTION
+function runYuvrajMacro()
+    local f = io.open(RECORD_FILE, "r")
+    if not f then
+        gg.alert("❌ NO RECORDED ROUTE FILE FOUND!\nPehle route record karo.")
+        return automationMenu()
+    end
+    
+    -- File se data load karna array me
+    local playRoute = {}
+    for line in f:lines() do
+        local x, y, z, t = line:match("([^|]+)|([^|]+)|([^|]+)|([^|]+)")
+        if x then
+            table.insert(playRoute, {x = tonumber(x), y = tonumber(y), z = tonumber(z), time = tonumber(t)})
+        end
+    end
+    f:close()
+    
+    if #playRoute == 0 then
+        gg.alert("❌ Saved file is empty or corrupted!")
+        return automationMenu()
+    end
+    
+    -- Speed Multiplier Setup
+    local speedPrompt = gg.prompt({
+        "⚡ ENTER PLAYBACK SPEED SPEED MULTIPLIER:\n[1 = Normal, 2 = Double Speed, 3 = Triple Speed]"
+    }, {"2"}, {"number"})
+    
+    if not speedPrompt then return automationMenu() end
+    local speedMultiplier = tonumber(speedPrompt[1]) or 1
+    if speedMultiplier <= 0 then speedMultiplier = 1 end
+    
+    gg.setVisible(false)
+    toast.success("🤖 YUVRAJ AUTOMATION BOT RUNNING!\nSpeed: " .. speedMultiplier .. "x\nHold GG Icon to cancel.", 4)
+    gg.sleep(1500)
+    
+    local lastPointTime = 0
+    for i, point in ipairs(playRoute) do
+        -- Emergency Force Stop check
+        if gg.isVisible() then
+            gg.setVisible(true)
+            toast.hint("🛑 BOT FORCE STOPPED BY USER", 2)
+            return automationMenu()
+        end
+        
+        -- Timing calculation (Physics/Math logic)
+        -- Jitna time hum pehle ruke the, use speed multiplier se divide kar dega
+        local timeGap = point.time - lastPointTime
+        if timeGap > 0 then
+            local waitTime = (timeGap * 1000) / speedMultiplier
+            gg.sleep(waitTime)
+        end
+        
+        -- Teleporting to the point
+        doTeleport(point.x, point.y, point.z)
+        lastPointTime = point.time
+    end
+    
+    gg.setVisible(true)
+    gg.alert("🏁 AUTOMATION ROUTE COMPLETED SUCCESSFULLY!")
+    automationMenu()
+end
+
+-- 📂 3. AUTOMATION SUB-MENU
+function automationMenu()
+    menuuuvis = 0
+    local choice = gg.choice({
+        "╔══════════════════════════════════╗",
+        "║        🔴 START RECORDING ROUTE  ║",
+        "║        ▶️ RUN RECORDED BOT SPEED ║",
+        "╚══════════════════════════════════╝",
+        "🔙 RETURN TO MAIN MENU"
+    }, nil, "╔══════════════════════════════════════════════════╗\n║             AUTOMATION BOT - YUVRAJ              ║\n╚══════════════════════════════════════════════════╝")
+    
+    if not choice then return mainMenu() end
+    
+    if choice == 2 then 
+        startYuvrajRecording()
+    elseif choice == 3 then 
+        runYuvrajMacro()
+    elseif choice == 5 then 
+        mainMenu()
+    end
+    menuuuvis = -1
+end
+
+--╔═══════════════════════════════════════════════════════════════════╗
+--║                    DEV & SUPPORT                                  ║
 --╚═══════════════════════════════════════════════════════════════════╝
 
 function devMenu()
     local choice = gg.choice({
         "╔══════════════════════════════════╗",
-        "║        📺 YOUTUBE: @Adilbajwa1170      ║",
-        "║        💬 Discord: @adilbajwa03    ║",
+        "║        📺 YOUTUBE: @Yuvraj       ║",
+        "║        💬 TELEGRAM: @Yuvraj      ║",
         "╚══════════════════════════════════╝",
         "🔙 BACK"
-    }, nil, "╔══════════════════════════════════════════════════╗\n║               DEVELOPER - Adil                    ║\n╚══════════════════════════════════════════════════╝")
+    }, nil, "DEVELOPER - Yuvraj")
     
     if not choice then mainMenu() end
     if choice == 2 then
-        gg.copyText("https://youtube.com/@Adilbajwa1170")
-        gg.goURL("https://youtube.com/@Adilbajwa1170")
+        gg.copyText("https://youtube.com/@Yuvraj")
+        gg.goURL("https://youtube.com/@Yuvraj")
     elseif choice == 3 then
-        gg.copyText("https://dc.me/Adilbajwa03")
-        gg.goURL("https://dc.me/Adilbajwa03")
+        gg.copyText("https://t.me/Yuvraj")
+        gg.goURL("https://t.me/Yuvraj")
     elseif choice == 5 then
         mainMenu()
     end
@@ -1820,7 +2197,7 @@ function supportMenu()
         "║        UQXXXXXXXXXXXXXXXXXX      ║",
         "╚══════════════════════════════════╝",
         "🔙 BACK"
-    }, nil, "╔══════════════════════════════════════════════════╗\n║                SUPPORT - Adil                      ║\n╚══════════════════════════════════════════════════╝")
+    }, nil, "SUPPORT - Yuvraj")
     
     if not choice then mainMenu()
     elseif choice == 5 then mainMenu()
@@ -1829,13 +2206,13 @@ function supportMenu()
 end
 
 function exitScript()
-    if AdilAimbotRunning then
-        AdilAimbotRunning = false
-        AdilSmoothAimbotOff()
+    if YuvrajAimbotRunning then
+        YuvrajAimbotRunning = false
+        YuvrajSmoothAimbotOff()
     end
     print("╔══════════════════════════════════════════════════╗")
     print("║                                                  ║")
-    print("║          GRAND MOBILE SCRIPT - Adil           ║")
+    print("║          GRAND MOBILE SCRIPT - Yuvraj            ║")
     print("║                    EXITING...                    ║")
     print("║                                                  ║")
     print("╚══════════════════════════════════════════════════╝")
@@ -1857,15 +2234,15 @@ function mainMenu()
         "║        🔫 WEAPON MODS            ║",
         "║        👁️ VISUAL MODS            ║",
         "║        📍 TELEPORT               ║",
-        "╠══════════════════════════════════╣",
-        "║        🎯 AIMBOT Adil         ║",
-        "╠══════════════════════════════════╣",
+        "║        🎰 CASINO Hacks           ║",
+        "║        🎯 AIMBOT Yuvraj          ║",
+        "║        🤖 JOB AUTOMATION BOT     ║",
         "║        👑 DEVELOPER              ║",
         "║        💝 SUPPORT                ║",
-        "╠══════════════════════════════════╣",
+        "║                                  ║",
         "║        ❌ EXIT                   ║",
         "╚══════════════════════════════════╝"
-    }, nil, "╔══════════════════════════════════════════════════╗\n║          GRAND MOBILE SCRIPT - Adil                ║\n║                     VIP EDITION                        ║\n╚══════════════════════════════════════════════════╝")
+    }, nil, "✨💫 GRAND MOBILE SCRIPT - Yuvraj - VIP EDITION ✨💫")
     
     if not choice then return end
     
@@ -1874,7 +2251,9 @@ function mainMenu()
     elseif choice == 4 then gunMenu()
     elseif choice == 5 then visualMenu()
     elseif choice == 6 then tpMenu()
-    elseif choice == 8 then AdilAimMenu()
+    elseif choice == 7 then casinoMenu()
+    elseif choice == 8 then YuvrajAimMenu()
+    elseif choice == 9 then automationMenu()
     elseif choice == 10 then devMenu()
     elseif choice == 11 then supportMenu()
     elseif choice == 13 then exitScript()
@@ -1887,7 +2266,7 @@ end
 --║                      SCRIPT START                                 ║
 --╚═══════════════════════════════════════════════════════════════════╝
 
-toast.success("╔══════════════════════════════════════════════════╗\n║      🔥 Adil BAJWA 👿 SCRIPT LOADED 🔥       ║\n║              VIP EDITION READY                   ║\n╚══════════════════════════════════════════════════╝", 4)
+toast.success("✨💫 Yuvraj BIZZ WAR SCRIPT LOADED ✨💫", 4)
 gg.sleep(1500)
 
 while true do
@@ -1900,4 +2279,3 @@ while true do
     end
     gg.sleep(100)
 end
-  
