@@ -1452,70 +1452,52 @@ function teleportByCoords()
 end
 
 function teleportByMarker()
-    -- Step 1: Core Player freeze loop bypass trigger
     hookPLAYER(-4, F, 350)
-    
-    -- Force fully flush GG internal cache storage to stop old reference locks
-    gg.clearResults()
-    
     while true do
+        fg.clean()
         local points = {}
-        
-        -- Loop 1: Check primary dynamic marker arrays with direct value verification
+        local menu = {}
         for _, q in ipairs({"13950255104", "5360320512"}) do
             if #points == 0 then
                 Z.S(q, Q, O)
-                if Result and #Result > 0 then
-                    -- Reverse parsing: Naye pointer hamesha dynamic allocation me niche hote hain
-                    for i = #Result, 1, -1 do
-                        local v = Result[i]
+                if Result then
+                    for _, v in ipairs(Result) do
                         local vals = gg.getValues({
                             {address = v.address + 32, flags = F},
-                            {address = v.address + 36, flags = F}
+                            {address = v.address + 36, flags = F},
+                            {address = v.address + 40, flags = F},
+                            {address = v.address + 48, flags = F}
                         })
-                        local x, y = vals[1].value, vals[2].value
-                        
-                        -- Valid coordinates aur distance threshold filter check
-                        if x ~= 0 and y ~= 0 and math.abs(x) > 0.1 then
+                        local x, y, z, active = vals[1].value, vals[2].value, vals[3].value, vals[4].value
+                        if x ~= 0 and y ~= 0 and x > -3000 and x < 3000 and y > -3000 and y < 3000 and z == 0 and active == 1 then
                             table.insert(points, {x, y})
-                            break -- Absolute freshest valid point milte hi loop break karo
+                            table.insert(menu, string.format("📍 [%d] X:%.1f Y:%.1f", #points, x, y))
                         end
                     end
                 end
             end
         end
-        
-        -- Loop 2: Safe Fallback Area Allocation (Agar dynamic array flush ho gayi ho)
-        if #points == 0 then
-            gg.clearResults() -- Flush again for clean storage range memory allocation
-            gg.setRanges(Ca) 
-            gg.searchNumber("13950255104", Q)
-            local count = gg.getResultCount()
-            if count > 0 then
-                -- Target the absolute latest generated structural stack point
-                local rawRes = gg.getResults(count)
-                local targetNode = rawRes[count] -- Picks the newest allocated node address entry
-                local rawVals = gg.getValues({
-                    {address = targetNode.address + 32, flags = F},
-                    {address = targetNode.address + 36, flags = F}
-                })
-                if rawVals[1].value ~= 0 and math.abs(rawVals[1].value) > 0.1 then
-                    table.insert(points, {rawVals[1].value, rawVals[2].value})
-                end
-            end
-        end
-        
-        -- Execution Router Logic Check
         if #points == 0 then
             showError()
-            gg.clearResults()
-            hookPLAYER(-4, F, 100) -- Reset player normal physics weight state
+            fg.clean()
+            hookPLAYER(-4, F, 100)
             return tpMenu()
+        end
+        table.insert(menu, "🔄 REFRESH")
+        table.insert(menu, "🔙 BACK")
+        local s = gg.choice(menu, nil, "╔══════════════════════════════════════════════════╗\n║           SELECT MARKER TO TELEPORT                 ║\n╚══════════════════════════════════════════════════╝")
+        if not s then
+            gg.setVisible(false)
+            while not gg.isVisible() do gg.sleep(200) end
+        elseif menu[s] == "🔙 BACK" then
+            fg.clean()
+            hookPLAYER(-4, F, 100)
+            return tpMenu()
+        elseif menu[s] == "🔄 REFRESH" then
         else
-            -- Absolute verified coordinate allocation jump injection sequence
-            doTeleport(points[1][1], points[1][2], 50)
+            doTeleport(points[s][1], points[s][2], 50)
             showSuccess()
-            gg.clearResults() -- Instantly clean reference states after success jump
+            fg.clean()
             break
         end
     end
