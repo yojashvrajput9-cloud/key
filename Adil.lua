@@ -1599,6 +1599,48 @@ function managePointsMenu()
     end
 end
 
+function yuvrajFreshMarkerTP()
+    -- 1. GameGuardian ke purane cached results ko clear karna
+    gg.clearResults()
+    
+    -- 2. Region setup (Grand Mobile dynamic memory target)
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    
+    -- 3. Marker ki main address ID scan karna
+    gg.searchNumber("13950255104", gg.TYPE_QWORD)
+    local count = gg.getResultCount()
+    
+    if count == 0 then
+        gg.alert("❌ MAP PAR MARKER NAHI MILA!\nPehle map khol kar kahin bhi RED MARKER lagao.")
+        return mainMenu()
+    end
+    
+    local results = gg.getResults(count)
+    local targetNode = results[count] -- Sabse naya registered address pointer uthana
+    
+    -- 4. Naye dynamic offsets se X aur Y coordinates read karna
+    local coords = gg.getValues({
+        {address = targetNode.address + 32, flags = gg.TYPE_FLOAT}, -- X coordinate
+        {address = targetNode.address + 36, flags = gg.TYPE_FLOAT}  -- Y coordinate
+    })
+    
+    local mapX = coords[1].value
+    local mapY = coords[2].value
+    
+    -- 5. Agar coordinates valid hain toh jump execute karna
+    if mapX ~= 0 and mapY ~= 0 and math.abs(mapX) > 1.0 then
+        -- Character ko safe height (Z = 50) par seedha marker ki jagah phenkna
+        -- Note: DoTeleport ki jagah tumhari script ka jo bhi teleport function hai wo naam yahan aayega
+        doTeleport(mapX, mapY, 50) 
+        gg.toast("🚀 TELEPORTED TO MARKER SUCCESSFULLY!")
+    else
+        gg.alert("⚠️ Teleport fail! Marker sahi jagah register nahi hua.")
+    end
+    
+    gg.clearResults()
+    mainMenu()
+end
+
 function viewSavedPoints()
     if #savedPoints == 0 then
         gg.alert("📋 NO SAVED POINTS FOUND")
@@ -1801,6 +1843,7 @@ function tpMenu()
         "╔══════════════════════════════════╗",
         "║        📍 TELEPORT BY COORDS     ║",
         "║        📌 TELEPORT BY MARKER     ║",
+        "║        📌 TELEPORT BY MARKER VIP ║",
         "║        👣 TELEPORT BY FOOT       ║",
         "║        💾 SAVE/MANAGE POINTS     ║",
         "╚══════════════════════════════════╝",
@@ -1810,9 +1853,10 @@ function tpMenu()
     if not choice then mainMenu() end
     if choice == 2 then teleportByCoords()
     elseif choice == 3 then teleportByMarker()
-    elseif choice == 4 then teleportByFootMenu()
-    elseif choice == 5 then managePointsMenu()
-    elseif choice == 7 then mainMenu()
+    elseif choice == 4 then yuvrajFreshMarkerTP()
+    elseif choice == 5 then teleportByFootMenu()
+    elseif choice == 6 then managePointsMenu()
+    elseif choice == 8 then mainMenu()
     end
     menuuuvis = -1
 end
