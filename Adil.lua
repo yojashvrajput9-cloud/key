@@ -1601,45 +1601,61 @@ function managePointsMenu()
 end
 
 function yuvrajFreshMarkerTP()
-    -- 1. GameGuardian ke purane cached results ko clear karna
+    -- Character ko temporarily hawa me freeze karna bypass ke liye
+    hookPLAYER(-4, F, 350)
+    
+    -- GameGuardian ke storage aur results ko poori tarah flush karna
     gg.clearResults()
+    gg.clearList()
     
-    -- 2. Region setup (Grand Mobile dynamic memory target)
-    gg.setRanges(gg.REGION_ANONYMOUS)
+    local points = {}
     
-    -- 3. Marker ki main address ID scan karna
-    gg.searchNumber("13950255104", gg.TYPE_QWORD)
-    local count = gg.getResultCount()
-    
-    if count == 0 then
-        gg.alert("❌ MAP PAR MARKER NAHI MILA!\nPehle map khol kar kahin bhi RED MARKER lagao.")
-        return mainMenu()
+    -- Loop: Grand Mobile ke marker registers ko scan karna
+    for _, markerID in ipairs({"13950255104", "5360320512"}) do
+        gg.clearResults() 
+        gg.setRanges(Ca or gg.REGION_ANONYMOUS)
+        gg.searchNumber(markerID, Q)
+        
+        local count = gg.getResultCount()
+        if count > 0 then
+            local allResults = gg.getResults(count)
+            
+            -- Reverse Loop: Memory ke sabse bottom se fresh allocation check karna
+            for i = count, 1, -1 do
+                local node = allResults[i]
+                local vals = gg.getValues({
+                    {address = node.address + 32, flags = F}, 
+                    {address = node.address + 36, flags = F}  
+                })
+                
+                local mx = vals[1].value
+                local my = vals[2].value
+                
+                if mx ~= 0 and my ~= 0 and math.abs(mx) > 1.0 then
+                    table.insert(points, {mx, my})
+                    break 
+                end
+            end
+        end
     end
     
-    local results = gg.getResults(count)
-    local targetNode = results[count] -- Sabse naya registered address pointer uthana
-    
-    -- 4. Naye dynamic offsets se X aur Y coordinates read karna
-    local coords = gg.getValues({
-        {address = targetNode.address + 32, flags = gg.TYPE_FLOAT}, -- X coordinate
-        {address = targetNode.address + 36, flags = gg.TYPE_FLOAT}  -- Y coordinate
-    })
-    
-    local mapX = coords[1].value
-    local mapY = coords[2].value
-    
-    -- 5. Agar coordinates valid hain toh jump execute karna
-    if mapX ~= 0 and mapY ~= 0 and math.abs(mapX) > 1.0 then
-        -- Character ko safe height (Z = 50) par seedha marker ki jagah phenkna
-        -- Note: DoTeleport ki jagah tumhari script ka jo bhi teleport function hai wo naam yahan aayega
-        doTeleport(mapX, mapY, 50) 
-        gg.toast("🚀 TELEPORTED TO MARKER SUCCESSFULLY!")
+    -- Execution Phase: Bina kisi confirmation ya menu ke direct teleportation
+    if #points == 0 then
+        -- Agar marker nahi mila toh direct error toast dikhakar baahar nikal jayega
+        toast.error("❌ MARKER NOT FOUND ON MAP ❌", 2)
+        gg.clearResults()
+        hookPLAYER(-4, F, 100) -- Reset normal gravity weight
+        return tpMenu()
     else
-        gg.alert("⚠️ Teleport fail! Marker sahi jagah register nahi hua.")
+        -- Absolute fresh index value par instant secure jump execute karna
+        doTeleport(points[1][1], points[1][2], 50)
+        toast.success("✅ INSTANTLY TELEPORTED ✨", 2)
+        
+        -- Teleport hote hi RAM cache ko instantly clean karna aur physics normal karna
+        gg.clearResults()
+        hookPLAYER(-4, F, 100) 
+        return tpMenu() -- Seedha menu par wapas bina kisi confirmation dialogue ke
     end
-    
-    gg.clearResults()
-    mainMenu()
 end
 
 function viewSavedPoints()
