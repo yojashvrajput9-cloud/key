@@ -1452,81 +1452,53 @@ function teleportByCoords()
 end
 
 function teleportByMarker()
-    -- Step 1: Character ko temporarily hawa me freeze karna bypass ke liye
+    -- Character weight bypass toggle
     hookPLAYER(-4, F, 350)
-    
-    -- GameGuardian ke storage aur results ko poori tarah flush karna (Sabse Important)
     gg.clearResults()
-    gg.clearList()
     
     local points = {}
     
-    -- Loop 1: Grand Mobile ke dono primary marker registers ko alag-alag scan karna
-    for _, markerID in ipairs({"13950255104", "5360320512"}) do
-        gg.clearResults() -- Har engine scan se pehle clean slate
-        gg.setRanges(Ca or gg.REGION_ANONYMOUS)
-        gg.searchNumber(markerID, Q)
-        
-        local count = gg.getResultCount()
-        if count > 0 then
-            local allResults = gg.getResults(count)
-            
-            -- Reverse Loop: Memory ke sabse bottom (newest allocation) se check shuru karna
-            for i = count, 1, -1 do
-                local node = allResults[i]
-                local vals = gg.getValues({
-                    {address = node.address + 32, flags = F}, -- X Coordinate Offset
-                    {address = node.address + 36, flags = F}  -- Y Coordinate Offset
-                })
-                
-                local mx = vals[1].value
-                local my = vals[2].value
-                
-                -- Dynamic Validation: Coordinates zero nahi hone chahiye aur fake decimal ghost nahi hone chahiye
-                if mx ~= 0 and my ~= 0 and math.abs(mx) > 1.0 then
-                    table.insert(points, {mx, my})
-                    break -- Jaise hi sabse fresh valid point mile, is list se baahar nikal jao
-                end
-            end
-        end
-    end
+    -- Grand Mobile naye system ranges verification scan
+    gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC)
     
-    -- Fallback Isolation: Agar upar wale system me clear nahi hua, toh strict cache wipe scan chalao
-    if #points == 0 then
-        gg.clearResults()
-        gg.setRanges(Ca or gg.REGION_ANONYMOUS)
-        gg.searchNumber("13950255104", Q)
-        local finalCount = gg.getResultCount()
+    -- Main map marker indicator registration key check
+    gg.searchNumber("13950255104", gg.TYPE_QWORD)
+    local count = gg.getResultCount()
+    
+    if count > 0 then
+        local res = gg.getResults(count)
         
-        if finalCount > 0 then
-            local finalResults = gg.getResults(finalCount)
-            -- Target standard bottom-most stack reference pointer
-            local activeNode = finalResults[finalCount]
-            local finalVals = gg.getValues({
-                {address = activeNode.address + 32, flags = F},
-                {address = activeNode.address + 36, flags = F}
+        -- Loop starting from the most freshly allocated pointer block down
+        for i = count, 1, -1 do
+            local baseAddr = res[i].address
+            local checkVals = gg.getValues({
+                {address = baseAddr + 32, flags = gg.TYPE_FLOAT}, -- Potential X
+                {address = baseAddr + 36, flags = F}              -- Potential Y
             })
-            if finalVals[1].value ~= 0 and math.abs(finalVals[1].value) > 1.0 then
-                table.insert(points, {finalVals[1].value, finalVals[2].value})
+            
+            local rx = checkVals[1].value
+            local ry = checkVals[2].value
+            
+            -- Grand Mobile Map boundaries filter (-3000 to +3000 range check)
+            if rx ~= 0 and ry ~= 0 and math.abs(rx) > 1.0 and math.abs(rx) < 4000 then
+                table.insert(points, {rx, ry})
+                break 
             end
         end
     end
     
-    -- Execution Phase: Check karna ki data mila ya nahi
+    -- Jump execution handler
     if #points == 0 then
-        -- Agar marker nahi mila toh map freeze hatao aur exit karo
         showError()
         gg.clearResults()
-        hookPLAYER(-4, F, 100) -- Reset normal player gravity weight
+        hookPLAYER(-4, F, 100)
         return tpMenu()
     else
-        -- Absolute fresh index value par secure jump execute karna
+        -- Absolute precise dynamic entry teleport setup
         doTeleport(points[1][1], points[1][2], 50)
         showSuccess()
-        
-        -- Teleport hote hi RAM cache ko instantly clean karna taaki agla mark stuck na ho
         gg.clearResults()
-        hookPLAYER(-4, F, 100) -- Re-enable normal physics parameters
+        hookPLAYER(-4, F, 100)
     end
 end
 
