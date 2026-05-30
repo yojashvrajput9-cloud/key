@@ -1452,53 +1452,72 @@ function teleportByCoords()
 end
 
 function teleportByMarker()
-    -- Character weight bypass toggle
+    -- Step 1: Core Player freeze loop bypass trigger
     hookPLAYER(-4, F, 350)
+    
+    -- Force fully flush GG internal cache storage to stop old reference locks
     gg.clearResults()
     
-    local points = {}
-    
-    -- Grand Mobile naye system ranges verification scan
-    gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC)
-    
-    -- Main map marker indicator registration key check
-    gg.searchNumber("13950255104", gg.TYPE_QWORD)
-    local count = gg.getResultCount()
-    
-    if count > 0 then
-        local res = gg.getResults(count)
+    while true do
+        local points = {}
         
-        -- Loop starting from the most freshly allocated pointer block down
-        for i = count, 1, -1 do
-            local baseAddr = res[i].address
-            local checkVals = gg.getValues({
-                {address = baseAddr + 32, flags = gg.TYPE_FLOAT}, -- Potential X
-                {address = baseAddr + 36, flags = F}              -- Potential Y
-            })
-            
-            local rx = checkVals[1].value
-            local ry = checkVals[2].value
-            
-            -- Grand Mobile Map boundaries filter (-3000 to +3000 range check)
-            if rx ~= 0 and ry ~= 0 and math.abs(rx) > 1.0 and math.abs(rx) < 4000 then
-                table.insert(points, {rx, ry})
-                break 
+        -- Loop 1: Check primary dynamic marker arrays with direct value verification
+        for _, q in ipairs({"13950255104", "5360320512"}) do
+            if #points == 0 then
+                Z.S(q, Q, O)
+                if Result and #Result > 0 then
+                    -- Reverse parsing: Naye pointer hamesha dynamic allocation me niche hote hain
+                    for i = #Result, 1, -1 do
+                        local v = Result[i]
+                        local vals = gg.getValues({
+                            {address = v.address + 32, flags = F},
+                            {address = v.address + 36, flags = F}
+                        })
+                        local x, y = vals[1].value, vals[2].value
+                        
+                        -- Valid coordinates aur distance threshold filter check
+                        if x ~= 0 and y ~= 0 and math.abs(x) > 0.1 then
+                            table.insert(points, {x, y})
+                            break -- Absolute freshest valid point milte hi loop break karo
+                        end
+                    end
+                end
             end
         end
-    end
-    
-    -- Jump execution handler
-    if #points == 0 then
-        showError()
-        gg.clearResults()
-        hookPLAYER(-4, F, 100)
-        return tpMenu()
-    else
-        -- Absolute precise dynamic entry teleport setup
-        doTeleport(points[1][1], points[1][2], 50)
-        showSuccess()
-        gg.clearResults()
-        hookPLAYER(-4, F, 100)
+        
+        -- Loop 2: Safe Fallback Area Allocation (Agar dynamic array flush ho gayi ho)
+        if #points == 0 then
+            gg.clearResults() -- Flush again for clean storage range memory allocation
+            gg.setRanges(Ca) 
+            gg.searchNumber("13950255104", Q)
+            local count = gg.getResultCount()
+            if count > 0 then
+                -- Target the absolute latest generated structural stack point
+                local rawRes = gg.getResults(count)
+                local targetNode = rawRes[count] -- Picks the newest allocated node address entry
+                local rawVals = gg.getValues({
+                    {address = targetNode.address + 32, flags = F},
+                    {address = targetNode.address + 36, flags = F}
+                })
+                if rawVals[1].value ~= 0 and math.abs(rawVals[1].value) > 0.1 then
+                    table.insert(points, {rawVals[1].value, rawVals[2].value})
+                end
+            end
+        end
+        
+        -- Execution Router Logic Check
+        if #points == 0 then
+            showError()
+            gg.clearResults()
+            hookPLAYER(-4, F, 100) -- Reset player normal physics weight state
+            return tpMenu()
+        else
+            -- Absolute verified coordinate allocation jump injection sequence
+            doTeleport(points[1][1], points[1][2], 50)
+            showSuccess()
+            gg.clearResults() -- Instantly clean reference states after success jump
+            break
+        end
     end
 end
 
